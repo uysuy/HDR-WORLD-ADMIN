@@ -1,15 +1,6 @@
 ﻿using HDR_WORLD_ADMIN.Helpers;
 using HDR_WORLD_ADMIN.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace HDR_WORLD_ADMIN.Forms
 {
@@ -157,6 +148,20 @@ namespace HDR_WORLD_ADMIN.Forms
 				cboCCY.DisplayMember = "ccy";
 				cboCCY.ValueMember = "ccy";
 			}
+			var sizeReq = await api.PostAPIStringAsync(ConstantHelper.Url + "sizes/api/v1/getList", null);
+			if(sizeReq.Status == ConstantHelper.Success)
+			{
+				var sizeRes = JsonConvert.DeserializeObject<Sizes>(sizeReq.JsonResult);
+					chklSize.Items.AddRange(sizeRes.data.sizes.ToArray());
+			}
+		}
+
+		private async void txtDescription_TextChanged(object sender, EventArgs e)
+		{
+			//var txt = txtDescription.Text;
+			//Translate.Google.Translate_Get("", "fr", "Hi");
+			//MsgHelper.MsgInfo(Translate.Google.translate);
+
 		}
 	}
 }

@@ -37,7 +37,7 @@
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.txtDescription = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.pbimages = new System.Windows.Forms.PictureBox();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -46,7 +46,7 @@
 			this.pnImages = new System.Windows.Forms.Panel();
 			this.label6 = new System.Windows.Forms.Label();
 			this.pbThumnail = new System.Windows.Forms.PictureBox();
-			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+			this.chklSize = new System.Windows.Forms.CheckedListBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.cboCCY = new System.Windows.Forms.ComboBox();
@@ -107,13 +107,14 @@
 			this.label4.TabIndex = 4;
 			this.label4.Text = "Description";
 			// 
-			// textBox3
+			// txtDescription
 			// 
-			this.textBox3.Location = new System.Drawing.Point(86, 117);
-			this.textBox3.Multiline = true;
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(283, 206);
-			this.textBox3.TabIndex = 5;
+			this.txtDescription.Location = new System.Drawing.Point(86, 117);
+			this.txtDescription.Multiline = true;
+			this.txtDescription.Name = "txtDescription";
+			this.txtDescription.Size = new System.Drawing.Size(283, 206);
+			this.txtDescription.TabIndex = 5;
+			this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
 			// 
 			// label5
 			// 
@@ -190,22 +191,23 @@
 			this.pbThumnail.TabStop = false;
 			this.pbThumnail.Click += new System.EventHandler(this.pbThumnail_Click);
 			// 
-			// checkedListBox1
+			// chklSize
 			// 
-			this.checkedListBox1.FormattingEnabled = true;
-			this.checkedListBox1.Location = new System.Drawing.Point(478, 320);
-			this.checkedListBox1.Name = "checkedListBox1";
-			this.checkedListBox1.Size = new System.Drawing.Size(484, 112);
-			this.checkedListBox1.TabIndex = 10;
+			this.chklSize.CheckOnClick = true;
+			this.chklSize.FormattingEnabled = true;
+			this.chklSize.Location = new System.Drawing.Point(478, 320);
+			this.chklSize.Name = "chklSize";
+			this.chklSize.Size = new System.Drawing.Size(484, 112);
+			this.chklSize.TabIndex = 10;
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Location = new System.Drawing.Point(432, 327);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(27, 15);
+			this.label7.Size = new System.Drawing.Size(32, 15);
 			this.label7.TabIndex = 11;
-			this.label7.Text = "Size";
+			this.label7.Text = "Sizes";
 			// 
 			// label8
 			// 
@@ -218,6 +220,7 @@
 			// 
 			// cboCCY
 			// 
+			this.cboCCY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboCCY.FormattingEnabled = true;
 			this.cboCCY.Location = new System.Drawing.Point(478, 442);
 			this.cboCCY.Name = "cboCCY";
@@ -241,12 +244,12 @@
 			this.Controls.Add(this.cboCCY);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.label7);
-			this.Controls.Add(this.checkedListBox1);
+			this.Controls.Add(this.chklSize);
 			this.Controls.Add(this.pbThumnail);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.pnImages);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.textBox3);
+			this.Controls.Add(this.txtDescription);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.textBox2);
@@ -275,13 +278,13 @@
 		private ColorDialog colorDialog1;
 		private Label label3;
 		private Label label4;
-		private TextBox textBox3;
+		private TextBox txtDescription;
 		private Label label5;
 		private PictureBox pbimages;
 		private Panel pnImages;
 		private Label label6;
 		private PictureBox pbThumnail;
-		private CheckedListBox checkedListBox1;
+		private CheckedListBox chklSize;
 		private Label label7;
 		private Label label8;
 		private ComboBox cboCCY;
