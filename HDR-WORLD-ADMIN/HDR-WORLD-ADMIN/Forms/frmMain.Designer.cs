@@ -37,7 +37,7 @@
 			this.pastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.operationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.newTsm = new System.Windows.Forms.ToolStripMenuItem();
 			this.pendingOrderedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.historyOrderedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,29 +112,30 @@
 			// productsToolStripMenuItem
 			// 
 			this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
+            this.newTsm,
             this.pendingOrderedToolStripMenuItem,
             this.historyOrderedToolStripMenuItem});
 			this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-			this.productsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+			this.productsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.productsToolStripMenuItem.Text = "Products";
 			// 
-			// newToolStripMenuItem
+			// newTsm
 			// 
-			this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-			this.newToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-			this.newToolStripMenuItem.Text = "New";
+			this.newTsm.Name = "newTsm";
+			this.newTsm.Size = new System.Drawing.Size(180, 22);
+			this.newTsm.Text = "New";
+			this.newTsm.Click += new System.EventHandler(this.newTsm_Click);
 			// 
 			// pendingOrderedToolStripMenuItem
 			// 
 			this.pendingOrderedToolStripMenuItem.Name = "pendingOrderedToolStripMenuItem";
-			this.pendingOrderedToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.pendingOrderedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.pendingOrderedToolStripMenuItem.Text = "Pending Ordered";
 			// 
 			// historyOrderedToolStripMenuItem
 			// 
 			this.historyOrderedToolStripMenuItem.Name = "historyOrderedToolStripMenuItem";
-			this.historyOrderedToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.historyOrderedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.historyOrderedToolStripMenuItem.Text = "History Ordered";
 			// 
 			// helpToolStripMenuItem
@@ -188,7 +189,7 @@
 		private ToolStripMenuItem pastToolStripMenuItem;
 		private ToolStripMenuItem operationsToolStripMenuItem;
 		private ToolStripMenuItem productsToolStripMenuItem;
-		private ToolStripMenuItem newToolStripMenuItem;
+		private ToolStripMenuItem newTsm;
 		private ToolStripMenuItem pendingOrderedToolStripMenuItem;
 		private ToolStripMenuItem historyOrderedToolStripMenuItem;
 		private ToolStripMenuItem helpToolStripMenuItem;

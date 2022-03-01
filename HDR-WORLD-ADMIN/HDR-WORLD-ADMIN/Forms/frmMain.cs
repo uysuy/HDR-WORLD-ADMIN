@@ -34,5 +34,15 @@ namespace HDR_WORLD_ADMIN.Forms
 			if(_frm !=null)
 				_frm.Dispose();
 		}
+
+		private void newTsm_Click(object sender, EventArgs e)
+		{
+			ShowForm(new frmNewProduct());
+		}
+		private void ShowForm(Form frm)
+		{
+			frm.MdiParent = this;
+			frm.Show();
+		}
 	}
 }
